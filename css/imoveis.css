@@ -43,6 +43,90 @@
   box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.8);
 }
 
+#section-imoveis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+#section-imoveis .full-imovel {
+  background-color: #fff;
+  border: 1px solid #c38303;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+  display: flex;
+  gap: 1em;
+}
+
+#section-imoveis .full-imovel:hover {
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.8);
+}
+
+#section-imoveis .full-imovel .full-descricao {
+  padding: 0.5em;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+#section-imoveis .full-imovel .full-descricao h3 {
+  text-align: center;
+  margin-bottom: 0.5em;
+  padding: 0;
+}
+
+#section-imoveis .full-imovel .full-descricao p {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  color: #555;
+  padding: 0;
+}
+
+#section-imoveis .full-imovel .full-descricao p i {
+  color: #c38303;
+  font-size: 1.2em;
+}
+
+#section-imoveis .full-imovel .full-imagem {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#section-imoveis .full-imovel .full-imagem div {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10px;
+}
+
+#section-imoveis .full-imovel .full-imagem i {
+  cursor: pointer;
+  color: #c38303;
+  text-shadow: 1px 1px 1px #000;
+  transition: all 0.2s ease;
+}
+
+#section-imoveis .full-imovel .full-imagem i:hover {
+  transform: scale(1.2);
+}
+
+#section-imoveis .full-imovel .full-imagem img {
+  width: 25em;
+  height: 100%;
+  border-radius: 5px;
+}
+
 @media (max-width: 780px) {
   .section-filtro {
     flex-direction: column;
@@ -68,5 +152,28 @@
     outline: none;
     border: none;
     border-radius: 2px;
+  }
+
+  #section-imoveis .full-imovel {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+  }
+
+  #section-imoveis .full-imovel .full-imagem {
+    flex-direction: column;
+  }
+
+  #section-imoveis .full-imovel .full-imagem img {
+    width: 100%;
+  }
+
+  #section-imoveis .full-imovel .full-descricao {
+    font-size: 0.9em;
+  }
+
+  #section-imoveis .full-imovel .full-descricao h3,
+  #section-imoveis .full-imovel .full-descricao p {
+    border: none;
   }
 }
