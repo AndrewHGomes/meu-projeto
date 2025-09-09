@@ -15,8 +15,8 @@ const criarFullCardHTML = (imovel) => {
       <div class="full-imagem">
           ${imagensHtml}
         <div class="setas">
-          <i class="fa-solid fa-less-than"></i>
-          <i class="fa-solid fa-greater-than"></i>
+          <i class="fa-solid fa-chevron-left"></i>
+          <i class="fa-solid fa-chevron-right"></i>
         </div>
       </div>
       <div class="full-descricao">
@@ -48,8 +48,8 @@ const cardsImoveis = document.querySelectorAll(".full-imovel");
 
 cardsImoveis.forEach((card) => {
   const imagens = card.querySelectorAll(".imagem-imovel");
-  const setaEsquerda = card.querySelector(".fa-less-than");
-  const setaDireita = card.querySelector(".fa-greater-than");
+  const setaEsquerda = card.querySelector(".fa-chevron-left");
+  const setaDireita = card.querySelector(".fa-chevron-right");
   let indiceAtual = 0;
 
   function mostrarImagem() {

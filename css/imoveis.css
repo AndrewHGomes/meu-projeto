@@ -111,14 +111,18 @@
 }
 
 #section-imoveis .full-imovel .full-imagem i {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 0.9em;
+  padding: 0.2em;
   cursor: pointer;
-  color: #c38303;
+  color: #fff;
   text-shadow: 1px 1px 1px #000;
+  border-radius: 2px;
   transition: all 0.2s ease;
 }
 
 #section-imoveis .full-imovel .full-imagem i:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #section-imoveis .full-imovel .full-imagem img {

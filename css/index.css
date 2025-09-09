@@ -52,7 +52,7 @@
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 0.3em;
 }
 
 #sessao-imoveis .div-imovel .div-descricao h3 {
@@ -64,7 +64,7 @@
 #sessao-imoveis .div-imovel .div-descricao p {
   display: flex;
   align-items: center;
-  gap: 0.8em;
+  gap: 0.5em;
   color: #555;
   padding: 0;
 }
