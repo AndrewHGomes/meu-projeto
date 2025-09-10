@@ -1,0 +1,123 @@
+/* ========================================================== */
+/* Estilos do Banner "Sobre Nós" */
+/* ========================================================== */
+.banner-sobre {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../assets/home-hero.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--cor-texto-claro);
+  text-align: center;
+  padding: 8em 2em;
+}
+
+.banner-sobre h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+}
+
+.banner-sobre p {
+  font-size: 1.5em;
+  font-weight: 300;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ========================================================== */
+/* Estilos da Seção Institucional */
+/* ========================================================== */
+.institucional {
+  padding: 4em 1em;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6;
+  color: var(--cor-texto-escuro);
+}
+
+.institucional h2 {
+  font-size: 2.2em;
+  margin-bottom: 1em;
+  color: var(--cor-primaria);
+}
+
+.institucional p {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+.destaque {
+  color: var(--cor-primaria);
+  font-weight: bold;
+}
+
+/* ========================================================== */
+/* Estilos da Seção de Diferenciais */
+/* ========================================================== */
+.diferenciais {
+  padding: 4em 1em;
+  background-color: var(--cor-fundo-claro);
+  text-align: center;
+}
+
+.diferenciais h2 {
+  font-size: 2.2em;
+  margin-bottom: 2em;
+  color: var(--cor-primaria);
+}
+
+.diferenciais .cards-diferenciais {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+
+.diferenciais .card {
+  background-color: var(--cor-card);
+  border-radius: 8px;
+  box-shadow: var(--sombra-media);
+  padding: 2em;
+  flex: 1 1 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.diferenciais .card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-hover);
+}
+
+.diferenciais .card i {
+  font-size: 3em;
+  color: var(--cor-primaria);
+  margin-bottom: 0.5em;
+}
+
+.diferenciais .card h3 {
+  font-size: 1.4em;
+  margin-bottom: 0.5em;
+  color: var(--cor-texto-escuro);
+}
+
+.diferenciais .card p {
+  font-size: 1em;
+  color: var(--cor-texto-escuro);
+}
+
+/* ========================================================== */
+/* Estilos para telas menores */
+/* ========================================================== */
+@media (max-width: 768px) {
+  .banner-sobre h1 {
+    font-size: 2.5em;
+  }
+
+  .banner-sobre p {
+    font-size: 1.2em;
+  }
+}

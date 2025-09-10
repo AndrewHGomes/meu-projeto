@@ -1,0 +1,190 @@
+/* ========================================================== */
+/* Estilos do Banner "Entre em Contato" */
+/* ========================================================== */
+.banner-contato {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../assets/home-hero.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--cor-texto-claro);
+  text-align: center;
+  padding: 8em 2em;
+}
+
+.banner-contato h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+}
+
+.banner-contato p {
+  font-size: 1.5em;
+  font-weight: var(--peso-fonte-light);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ========================================================== */
+/* Estilos da Seção Principal de Contato */
+/* ========================================================== */
+.contato-principal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3em;
+  padding: 4em 2em;
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+}
+
+.contato-principal h2 {
+  color: var(--cor-primaria);
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 1.5em;
+  width: 100%;
+}
+
+/* ========================================================== */
+/* Estilos para a Seção de Informações de Contato */
+/* ========================================================== */
+.info-contato {
+  flex: 1 1 350px;
+  padding: 2em;
+  background-color: var(--cor-fundo-claro);
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra-media);
+  text-align: center;
+  height: fit-content;
+}
+
+.info-contato .info-card {
+  margin-bottom: 2em;
+}
+
+.info-contato i {
+  font-size: 2em;
+  color: var(--cor-primaria);
+  margin-bottom: 0.5em;
+}
+
+.info-contato h3 {
+  font-size: 1.4em;
+  margin-bottom: 0.5em;
+  color: var(--cor-texto-escuro);
+}
+
+.info-contato p {
+  line-height: 1.6;
+  color: var(--cor-texto-escuro);
+}
+
+.info-contato .creci {
+  margin-top: 2em;
+  font-size: 0.9em;
+  color: var(--cor-texto-claro);
+}
+
+/* ========================================================== */
+/* Estilos para o Formulário de Contato */
+/* ========================================================== */
+.form-contato {
+  flex: 1 1 500px;
+  padding: 2em;
+  background-color: var(--cor-fundo-claro);
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra-media);
+}
+
+.form-contato form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-contato label {
+  font-weight: bold;
+  margin-top: 1em;
+  color: var(--cor-texto-escuro);
+}
+
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  padding: 0.8em;
+  margin-top: 0.5em;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-borda-pequeno);
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+  border-color: var(--cor-primaria);
+  outline: none;
+}
+
+.form-contato textarea {
+  resize: vertical;
+}
+
+.form-contato button {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  border: none;
+  padding: 1em;
+  margin-top: 1.5em;
+  cursor: pointer;
+  border-radius: var(--raio-borda-pequeno);
+  font-weight: var(--peso-fonte-bold);
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+
+.form-contato button:hover {
+  background-color: var(--cor-secundaria);
+}
+
+/* ========================================================== */
+/* Estilos para o Mapa */
+/* ========================================================== */
+.mapa-localizacao {
+  padding: 4em 1em;
+  text-align: center;
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+}
+
+.mapa-localizacao h2 {
+  color: var(--cor-primaria);
+  font-size: 2.2em;
+  margin-bottom: 1.5em;
+}
+
+.mapa-localizacao iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra-media);
+}
+
+/* ========================================================== */
+/* Estilos para telas menores */
+/* ========================================================== */
+@media (max-width: 768px) {
+  .contato-principal {
+    flex-direction: column;
+  }
+
+  .banner-contato h1 {
+    font-size: 2.5em;
+  }
+
+  .banner-contato p {
+    font-size: 1.2em;
+  }
+}

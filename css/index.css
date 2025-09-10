@@ -4,115 +4,184 @@
   flex-direction: column;
   align-items: center;
   gap: 1em;
+  padding: 2em;
 }
 
 .descricao h2 {
   font-size: 2em;
+  color: var(--cor-primaria);
 }
 
 .descricao p {
   font-size: 1.2em;
 }
 
-#sessao-imoveis {
+.imoveis-destaque {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 2em;
   flex-wrap: wrap;
+  gap: 2em;
+  padding: 0 1em;
 }
 
-#sessao-imoveis .div-imovel {
-  background-color: #fff;
+.imoveis-destaque .card-imovel {
+  background-color: var(--cor-fundo);
   width: 20em;
-  border: 1px solid #c38303;
+  border: 1px solid var(--cor-primaria);
   border-radius: 5px;
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--sombra-media);
   transition: all 0.4s ease;
+  overflow: hidden;
 }
 
-#sessao-imoveis .div-imovel .div-imagem img {
+/* Alteração: Definimos uma altura fixa para o container da imagem */
+.imoveis-destaque .card-imovel .imagem-imovel {
+  height: 15em; /* Altura fixa para todos os cards */
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+
+.imoveis-destaque .card-imovel .imagem-imovel img {
   width: 100%;
-  border-radius: 5px;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha o container sem distorcer */
   transition: all 0.4s ease;
 }
 
-#sessao-imoveis .div-imovel:hover {
+.imoveis-destaque .card-imovel:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.8);
+  box-shadow: var(--sombra-hover);
 }
 
-#sessao-imoveis .div-imovel:hover img {
-  transform: scale(1.02);
-  font-weight: bold;
+.imoveis-destaque .card-imovel:hover .imagem-imovel img {
+  transform: scale(1.05); /* Efeito de zoom mais notável */
 }
 
-#sessao-imoveis .div-imovel .div-descricao {
-  padding: 0.5em;
-  border-radius: 8px;
+.imoveis-destaque .card-imovel .info-imovel {
+  padding: 0.8em;
   display: flex;
   flex-direction: column;
-  gap: 0.3em;
+  gap: 0.5em;
 }
 
-#sessao-imoveis .div-imovel .div-descricao h3 {
+.imoveis-destaque .card-imovel .info-imovel h3 {
   text-align: center;
   margin-bottom: 0.5em;
-  padding: 0;
+  color: var(--cor-texto-escuro);
 }
 
-#sessao-imoveis .div-imovel .div-descricao p {
+.imoveis-destaque .card-imovel .info-imovel p {
   display: flex;
   align-items: center;
   gap: 0.5em;
   color: #555;
-  padding: 0;
+  font-size: 1em;
 }
 
-#sessao-imoveis .div-imovel .div-descricao p i {
-  color: #c38303;
+.imoveis-destaque .card-imovel .info-imovel p i {
+  color: var(--cor-primaria);
   font-size: 1.2em;
 }
 
-#sessao-imoveis .div-imovel button {
-  background-image: linear-gradient(to right, #c38303, #ffee61);
-  color: #2f2f2f;
+.imoveis-destaque .card-imovel .btn-detalhes {
+  background-image: linear-gradient(
+    to right,
+    var(--cor-primaria),
+    var(--cor-gradiente-claro)
+  );
+  color: var(--cor-texto-escuro);
   display: block;
   font-weight: bold;
-  width: 50%;
+  width: 70%;
   margin: 0.8em auto;
-  padding: 0.5em;
+  padding: 0.6em;
   border: none;
   border-radius: 2px;
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--sombra-media);
   cursor: pointer;
-}
-
-.section-info {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.section-info a {
-  width: 12em;
-  background-image: linear-gradient(to right, #c38303, #ffee61);
-  color: #2f2f2f;
-  padding: 0.5em;
   text-align: center;
-  font-weight: bold;
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.5);
   transition: all 0.4s ease;
 }
 
-.section-info a:hover {
-  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.8);
+.imoveis-destaque .card-imovel .btn-detalhes:hover {
+  box-shadow: var(--sombra-hover);
+}
+
+/* ========================================================== */
+/* Estilos da Seção de Ações Principais */
+/* ========================================================== */
+.acoes-principais {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-top: 3em;
+  padding: 0 1em;
+}
+
+.acoes-principais .btn {
+  width: 12em;
+  background-image: linear-gradient(
+    to right,
+    var(--cor-primaria),
+    var(--cor-gradiente-claro)
+  );
+  color: var(--cor-texto-escuro);
+  padding: 0.5em;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: var(--sombra-media);
+  transition: all 0.4s ease;
+}
+
+.acoes-principais .btn:hover {
+  box-shadow: var(--sombra-hover);
   transform: translateY(-5px);
 }
 
+/* ========================================================== */
+/* Estilos do filtro na Seção Hero */
+/* ========================================================== */
+.filtro-hero {
+  position: absolute;
+  bottom: 2em;
+  z-index: 2;
+  box-shadow: var(--sombra-media);
+  border-radius: 5px;
+  overflow: hidden;
+  animation: fadeIn 2s forwards 1s;
+  opacity: 0;
+}
+
+#filtro-imoveis {
+  padding: 0.8em 1.5em;
+  font-size: 1.1em;
+  border: none;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-escuro);
+  cursor: pointer;
+  outline: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ========================================================== */
+/* Media Queries (Responsividade) */
+/* ========================================================== */
 @media (max-width: 800px) {
-  #sessao-imoveis .div-imovel,
-  #sessao-imoveis .div-imovel .div-imagem img {
+  .imoveis-destaque .card-imovel {
     width: 100%;
+  }
+
+  .imoveis-destaque .card-imovel .imagem-imovel {
+    height: 20em;
   }
 }
 
@@ -125,13 +194,12 @@
     font-size: 1em;
   }
 
-  .section-info {
+  .acoes-principais {
     flex-direction: column;
     align-items: center;
-    gap: 2em;
   }
 
-  .section-info a {
+  .acoes-principais .btn {
     width: 100%;
   }
 }

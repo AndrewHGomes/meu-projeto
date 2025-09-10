@@ -1,10 +1,47 @@
+/* ========================================================== */
+/* Variáveis de Estilo */
+/* ========================================================== */
+:root {
+  --cor-primaria: #c38303;
+  --cor-secundaria: #a06e02;
+  --cor-fundo: #fafafa;
+  --cor-card: #f7f7f7;
+  --cor-texto-claro: #fff;
+  --cor-texto-escuro: #2f2f2f;
+  --cor-gradiente-claro: #ffee61;
+  --sombra-leve: 0 2px 6px 2px rgba(0, 0, 0, 0.5);
+  --sombra-media: 0 0 6px 2px rgba(0, 0, 0, 0.5);
+  --sombra-hover: 0 0 8px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* ========================================================== */
+/* Estilos Globais */
+/* ========================================================== */
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
 
+body {
+  line-height: 1.6;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-escuro);
+}
+
+a {
+  text-decoration: none;
+  color: var(--cor-primaria);
+}
+
+ul {
+  list-style: none;
+}
+
+/* ========================================================== */
+/* Estilos do Hero (Banner) */
+/* ========================================================== */
 .hero-cover {
   height: 100vh;
   width: 100%;
@@ -35,17 +72,29 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  color: #fff;
+  color: var(--cor-texto-claro);
   padding: 20px;
   animation: fadeInUp 2s forwards 0.5s;
   opacity: 0;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  color: var(--cor-gradiente-claro);
+  margin-bottom: 1em;
+  text-shadow: 1px 1px 1px #2f2f2f;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  text-shadow: 0 0 2px #2f2f2f;
 }
 
 @keyframes fadeInUp {
@@ -59,19 +108,26 @@
   }
 }
 
+/* ========================================================== */
+/* Estilos do Header */
+/* ========================================================== */
 header {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
-  background-image: linear-gradient(to right, #c38303, #ffee61);
+  z-index: 1000;
+  background-image: linear-gradient(
+    to right,
+    var(--cor-primaria),
+    var(--cor-gradiente-claro)
+  );
   padding: 0.5em 1em;
-  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--sombra-leve);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #2f2f2f;
+  border-bottom: 1px solid var(--cor-texto-escuro);
 }
 
 header > a {
@@ -86,7 +142,7 @@ header > a:hover {
 
 header > a p,
 header > a small {
-  color: #2f2f2f;
+  color: var(--cor-texto-escuro);
   font-weight: bold;
 }
 
@@ -100,23 +156,30 @@ header nav ul {
 }
 
 header nav ul li a {
-  background-image: linear-gradient(to right, #c38303, #ffee61);
-  color: #2f2f2f;
+  background-image: linear-gradient(
+    to right,
+    var(--cor-primaria),
+    var(--cor-gradiente-claro)
+  );
+  color: var(--cor-texto-escuro);
   padding: 0.5em 1em;
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--sombra-media);
   border-radius: 2px;
   font-weight: bold;
   transition: all 0.4s ease;
 }
 
 header nav ul li a:hover {
-  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.8);
+  box-shadow: var(--sombra-hover);
 }
 
+/* ========================================================== */
+/* Estilos do Conteúdo Principal (Main) */
+/* ========================================================== */
 main {
   width: 100%;
-  background-color: #e0e0e0;
-  color: #2f2f2f;
+  background-color: var(--cor-card);
+  color: var(--cor-texto-escuro);
   padding: 8em 0.5em 2em 0.5em;
 }
 
@@ -125,20 +188,15 @@ main section {
   margin: 3em 0.5em;
 }
 
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
+/* ========================================================== */
+/* Estilos do Footer */
+/* ========================================================== */
 footer {
   width: 100%;
-  background-color: #2f2f2f;
+  background-color: var(--cor-texto-escuro);
   padding: 2em 0.5em;
   box-shadow: 0 -2px 6px 2px rgba(0, 0, 0, 0.5);
-  border-top: 1px solid #c38303;
+  border-top: 1px solid var(--cor-primaria);
 }
 
 footer section {
@@ -153,7 +211,7 @@ footer section h3 {
 
 footer h3,
 footer h5 {
-  color: #fff;
+  color: var(--cor-texto-claro);
 }
 
 footer p,
@@ -197,8 +255,12 @@ footer .footer-redes nav {
 footer .footer-redes nav a,
 footer .footer-novidades button {
   padding: 0.5em 1em;
-  background-image: linear-gradient(to right, #c38303, #ffee61);
-  color: #2f2f2f;
+  background-image: linear-gradient(
+    to right,
+    var(--cor-primaria),
+    var(--cor-gradiente-claro)
+  );
+  color: var(--cor-texto-escuro);
   font-weight: bold;
   border-radius: 2px;
   cursor: pointer;
@@ -206,7 +268,7 @@ footer .footer-novidades button {
 }
 
 footer .footer-redes nav a i {
-  color: #2f2f2f;
+  color: var(--cor-texto-escuro);
 }
 
 footer .footer-redes nav a:hover {
@@ -227,7 +289,7 @@ footer .footer-novidades button {
   font-size: 1em;
   border-radius: 2px;
   font-weight: bold;
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--sombra-media);
 }
 
 footer .footer-termos {
@@ -241,6 +303,9 @@ footer h5 {
   text-align: center;
 }
 
+/* ========================================================== */
+/* Media Queries (Responsividade) */
+/* ========================================================== */
 @media (max-width: 780px) {
   header {
     padding: 1em 0.5em;

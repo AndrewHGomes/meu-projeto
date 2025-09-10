@@ -3,7 +3,7 @@ const inicioUrl = "/central-imoveis/assets/imoveis/";
 const imoveis = [
   {
     id: 1,
-    titulo: "Algum titulo",
+    titulo: "Casa",
     contrato: "Aluguel",
     destaque: true,
     descricao: "Descrição mais curta",
@@ -32,7 +32,7 @@ const imoveis = [
   },
   {
     id: 2,
-    titulo: "Algum titulo",
+    titulo: "Apartamento",
     contrato: "Aluguel",
     destaque: false,
     descricao: "Descrição mais curta",
@@ -61,7 +61,7 @@ const imoveis = [
   },
   {
     id: 3,
-    titulo: "Algum titulo",
+    titulo: "Studio",
     contrato: "Aluguel",
     destaque: true,
     descricao: "Descrição mais curta",
@@ -90,7 +90,7 @@ const imoveis = [
   },
   {
     id: 4,
-    titulo: "Algum titulo",
+    titulo: "Casa",
     contrato: "Compra",
     destaque: false,
     descricao: "Descrição mais curta",
@@ -119,7 +119,7 @@ const imoveis = [
   },
   {
     id: 5,
-    titulo: "Algum titulo",
+    titulo: "Apartamento",
     contrato: "Compra",
     destaque: true,
     descricao: "Descrição mais curta",
@@ -148,7 +148,7 @@ const imoveis = [
   },
   {
     id: 6,
-    titulo: "Algum titulo",
+    titulo: "Terreno",
     contrato: "Compra",
     destaque: false,
     descricao: "Descrição mais curta",

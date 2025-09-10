@@ -1,104 +1,124 @@
-.section-filtro {
+/* ========================================================== */
+/* Estilos do Filtro de Imóveis */
+/* ========================================================== */
+.filtro-imoveis {
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1em;
+  padding: 1em;
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-primaria);
+  border-radius: 5px;
+  box-shadow: var(--sombra-media);
 }
 
-.section-filtro h2 {
+.filtro-imoveis h2 {
   font-size: 2em;
   margin-bottom: 0.5em;
+  color: var(--cor-primaria);
 }
 
-.section-filtro p {
+.filtro-imoveis p {
   font-size: 1.2em;
+  color: var(--cor-texto-escuro);
 }
 
-.section-filtro form {
+.filtro-imoveis form {
   width: 40%;
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 
-.section-filtro select,
-.section-filtro button {
+.filtro-imoveis select,
+.filtro-imoveis button {
   padding: 0.4em;
   font-size: 1em;
   outline: none;
-  border: none;
+  border: 1px solid var(--cor-primaria);
   border-radius: 2px;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-escuro);
 }
 
-.section-filtro button {
-  background-image: linear-gradient(to right, #c38303, #ffee61);
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.5);
+.filtro-imoveis button {
+  background-image: linear-gradient(
+    to right,
+    var(--cor-primaria),
+    var(--cor-gradiente-claro)
+  );
+  box-shadow: var(--sombra-media);
   font-weight: bold;
   cursor: pointer;
   transition: all 0.4s ease;
 }
 
-.section-filtro button:hover {
-  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.8);
+.filtro-imoveis button:hover {
+  box-shadow: var(--sombra-hover);
 }
 
-#section-imoveis {
+/* ========================================================== */
+/* Estilos da Lista de Imóveis */
+/* ========================================================== */
+#lista-imoveis {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 2.5em;
-  flex-wrap: wrap;
+  padding: 2em 0;
 }
 
-#section-imoveis .full-imovel {
-  background-color: #fff;
-  border: 1px solid #c38303;
+.card-imovel-full {
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-primaria);
   border-radius: 5px;
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--sombra-media);
   transition: all 0.4s ease;
   display: flex;
   gap: 1em;
+  overflow: hidden;
 }
 
-#section-imoveis .full-imovel:hover {
-  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.8);
+.card-imovel-full:hover {
+  box-shadow: var(--sombra-hover);
 }
 
-#section-imoveis .full-imovel .full-descricao {
+.card-imovel-full .descricao-completa {
   padding: 0.5em;
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
 
-#section-imoveis .full-imovel .full-descricao h3 {
+.card-imovel-full .descricao-completa h3 {
   text-align: center;
   margin-bottom: 0.5em;
-  padding: 0;
+  color: var(--cor-texto-escuro);
 }
 
-#section-imoveis .full-imovel .full-descricao p {
+.card-imovel-full .descricao-completa p {
   display: flex;
   align-items: center;
   gap: 0.5em;
   color: #555;
-  padding: 0;
 }
 
-#section-imoveis .full-imovel .full-descricao p i {
-  color: #c38303;
+.card-imovel-full .descricao-completa p i {
+  color: var(--cor-primaria);
   font-size: 1.2em;
 }
 
-#section-imoveis .full-imovel .full-imagem {
+.card-imovel-full .galeria-imagem {
   position: relative;
   display: flex;
   align-items: center;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  width: 25em; /* Define a largura da galeria de imagens */
 }
 
-#section-imoveis .full-imovel .full-imagem div {
+.card-imovel-full .galeria-imagem .setas {
   position: absolute;
   top: 50%;
   left: 0;
@@ -108,9 +128,10 @@
   justify-content: space-between;
   width: 100%;
   padding: 0 10px;
+  z-index: 2; /* Z-index maior para as setas */
 }
 
-#section-imoveis .full-imovel .full-imagem i {
+.card-imovel-full .galeria-imagem .setas i {
   background-color: rgba(0, 0, 0, 0.3);
   font-size: 0.9em;
   padding: 0.2em;
@@ -120,59 +141,89 @@
   transition: all 0.2s ease;
 }
 
-#section-imoveis .full-imovel .full-imagem img {
-  width: 25em;
+.card-imovel-full .galeria-imagem img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: 5px;
+  display: block;
+  transition: transform 0.5s ease-in-out;
 }
 
+.card-imovel-full .galeria-imagem.ampliada {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 80vw;
+  height: 80vh;
+  max-width: 900px;
+  max-height: 900px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.card-imovel-full .galeria-imagem.ampliada img {
+  border-radius: 0;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+.card-imovel-full .galeria-imagem.ampliada .setas {
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 40px;
+  z-index: 1001;
+}
+
+/* ========================================================== */
+/* Media Queries (Responsividade) */
+/* ========================================================== */
 @media (max-width: 780px) {
-  .section-filtro {
+  .filtro-imoveis {
     flex-direction: column;
   }
 
-  .section-filtro h2 {
+  .filtro-imoveis h2 {
     font-size: 1.5em;
   }
 
-  .section-filtro p {
+  .filtro-imoveis p {
     font-size: 1em;
   }
 
-  .section-filtro form {
+  .filtro-imoveis form {
     width: 100%;
     gap: 0.5em;
   }
 
-  .section-filtro select,
-  .section-filtro button {
+  .filtro-imoveis select,
+  .filtro-imoveis button {
     width: 100%;
     font-size: 0.9em;
-    outline: none;
-    border: none;
-    border-radius: 2px;
   }
 
-  #section-imoveis .full-imovel {
+  .card-imovel-full {
     flex-direction: column;
     justify-content: center;
     gap: 0;
   }
 
-  #section-imoveis .full-imovel .full-imagem {
-    flex-direction: column;
+  .card-imovel-full .galeria-imagem {
+    width: 100%;
+    height: auto;
   }
 
-  #section-imoveis .full-imovel .full-imagem img {
+  .card-imovel-full .galeria-imagem img {
+    height: auto;
     width: 100%;
   }
 
-  #section-imoveis .full-imovel .full-descricao {
+  .card-imovel-full .descricao-completa {
     font-size: 0.9em;
-  }
-
-  #section-imoveis .full-imovel .full-descricao h3,
-  #section-imoveis .full-imovel .full-descricao p {
-    border: none;
   }
 }
