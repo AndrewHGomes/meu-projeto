@@ -121,10 +121,6 @@
   transition: all 0.2s ease;
 }
 
-#section-imoveis .full-imovel .full-imagem i:hover {
-  transform: scale(1.1);
-}
-
 #section-imoveis .full-imovel .full-imagem img {
   width: 25em;
   height: 100%;
