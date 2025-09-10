@@ -47,7 +47,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 2em;
+  gap: 2.5em;
   flex-wrap: wrap;
 }
 
@@ -82,7 +82,7 @@
 #section-imoveis .full-imovel .full-descricao p {
   display: flex;
   align-items: center;
-  gap: 0.8em;
+  gap: 0.5em;
   color: #555;
   padding: 0;
 }
@@ -111,13 +111,12 @@
 }
 
 #section-imoveis .full-imovel .full-imagem i {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   font-size: 0.9em;
   padding: 0.2em;
   cursor: pointer;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
-  border-radius: 2px;
+  color: #ddd;
+  border-radius: 3px;
   transition: all 0.2s ease;
 }
 

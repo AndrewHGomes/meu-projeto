@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5em;
+  gap: 2em;
   flex-wrap: wrap;
 }
 
@@ -32,7 +32,7 @@
 }
 
 #sessao-imoveis .div-imovel .div-imagem img {
-  width: 19.9em;
+  width: 100%;
   border-radius: 5px;
   transition: all 0.4s ease;
 }
