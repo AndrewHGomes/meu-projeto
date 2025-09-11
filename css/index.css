@@ -188,7 +188,7 @@
 
   .imoveis-destaque .card-imovel {
     /* Adicione um padding lateral diretamente ao card */
-    padding: 0 1em;
+    /* padding: 0 1em; */
     width: 100%;
   }
 }
