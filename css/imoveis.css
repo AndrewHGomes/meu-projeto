@@ -76,6 +76,7 @@
   box-shadow: var(--sombra-media);
   transition: all 0.4s ease;
   display: flex;
+  flex-direction: column;
   gap: 1em;
   overflow: hidden;
 }
@@ -91,9 +92,15 @@
   gap: 0.5em;
 }
 
-.card-imovel-full .descricao-completa h3 {
+.card-imovel-full .descricao-completa div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-imovel-full .descricao-completa div h3,
+.card-imovel-full .descricao-completa div p {
   text-align: center;
-  margin-bottom: 0.5em;
   color: var(--cor-texto-escuro);
 }
 
@@ -115,7 +122,7 @@
   align-items: center;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
-  width: 25em; /* Define a largura da galeria de imagens */
+  height: 30em;
 }
 
 .card-imovel-full .galeria-imagem .setas {
@@ -128,7 +135,7 @@
   justify-content: space-between;
   width: 100%;
   padding: 0 10px;
-  z-index: 2; /* Z-index maior para as setas */
+  z-index: 2;
 }
 
 .card-imovel-full .galeria-imagem .setas i {
@@ -156,12 +163,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
-  width: 80vw;
-  height: 80vh;
+  width: 100vw;
+  height: 70vh;
   max-width: 900px;
   max-height: 900px;
   background-color: rgba(0, 0, 0, 0.9);
   border: none;
+  border-radius: 5px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
   cursor: pointer;
 }
@@ -208,9 +216,7 @@
   }
 
   .card-imovel-full {
-    flex-direction: column;
     justify-content: center;
-    gap: 0;
   }
 
   .card-imovel-full .galeria-imagem {

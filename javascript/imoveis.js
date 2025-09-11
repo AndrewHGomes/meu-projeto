@@ -21,7 +21,10 @@ const criarCardImovelHTML = (imovel) => {
       </div>
     </div>
     <div class="descricao-completa">
-      <h3>${imovel.titulo}</h3>
+      <div>
+        <h3>${imovel.titulo}</h3>
+        <p>Em ${imovel.cidade}</p>
+      </div>
       <p><i class="fa-solid fa-handshake"></i> ${imovel.contrato}</p>
       <p><i class="fa-solid fa-brazilian-real-sign"></i> ${imovel.preco}</p>
       <p><i class="fa-solid fa-location-dot"></i> ${imovel.localizacao}</p>
@@ -122,7 +125,7 @@ function filtrarImoveis(evento) {
 
   if (cidade) {
     imoveisFiltrados = imoveisFiltrados.filter(
-      (imovel) => imovel.localizacao === cidade
+      (imovel) => imovel.cidade === cidade
     );
   }
 
