@@ -12,6 +12,14 @@
   --sombra-leve: 0 2px 6px 2px rgba(0, 0, 0, 0.5);
   --sombra-media: 0 0 6px 2px rgba(0, 0, 0, 0.5);
   --sombra-hover: 0 0 8px 3px rgba(0, 0, 0, 0.8);
+
+  /* Variáveis que faltavam e foram adicionadas */
+  --largura-maxima: 100%;
+  --raio-borda: 5px;
+  --raio-borda-pequeno: 2px;
+  --peso-fonte-light: 300;
+  --cor-fundo-claro: #f7f7f7;
+  --cor-borda: #c38303;
 }
 
 /* ========================================================== */
@@ -47,12 +55,13 @@ ul {
   width: 100%;
   position: relative;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
   text-align: center;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5em;
 }
 
 .hero-cover img {

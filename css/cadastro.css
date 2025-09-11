@@ -135,7 +135,7 @@
   padding: 0.8em;
   margin-top: 0.5em;
   border: 1px solid var(--cor-primaria);
-  border-radius: 2px;
+  border-radius: var(--raio-borda);
   font-family: inherit;
   transition: border-color 0.3s ease;
   background-color: var(--cor-fundo);
@@ -175,18 +175,53 @@
 }
 
 /* ========================================================== */
+/* Estilos para Mensagens de Feedback */
+/* ========================================================== */
+#mensagem-feedback {
+  margin-top: 1.5em;
+  padding: 1em;
+  border-radius: var(--raio-borda);
+  text-align: center;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#mensagem-feedback.feedback-sucesso {
+  background-color: #d4edda;
+  color: #155724;
+  opacity: 1;
+}
+
+#mensagem-feedback.feedback-erro {
+  background-color: #f8d7da;
+  color: #721c24;
+  opacity: 1;
+}
+
+/* ========================================================== */
 /* Estilos para telas menores */
 /* ========================================================== */
 @media (max-width: 768px) {
+  /* Altera o layout para empilhar os elementos */
   .cadastro-principal {
     flex-direction: column;
+    gap: 1.5em; /* Reduz o espaçamento entre as seções */
+    padding: 2em 1em; /* Ajusta o padding para telas menores */
   }
 
+  /* Ajusta o padding interno das seções */
+  .info-aviso,
+  .form-cadastro {
+    padding: 1.5em;
+  }
+
+  /* Reduz o tamanho das fontes no banner */
   .banner-cadastro h1 {
-    font-size: 2.5em;
+    font-size: 2.2em;
   }
 
   .banner-cadastro p {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 }

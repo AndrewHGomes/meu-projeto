@@ -158,7 +158,7 @@
 }
 
 #filtro-imoveis {
-  text-align: center;
+  text-align: start;
   padding: 0.8em 1.5em;
   font-size: 1.1em;
   border: none;
@@ -181,12 +181,15 @@
 /* Media Queries (Responsividade) */
 /* ========================================================== */
 @media (max-width: 800px) {
-  .imoveis-destaque .card-imovel {
-    width: 100%;
+  .imoveis-destaque {
+    /* Remova o padding do contêiner */
+    padding: 0;
   }
 
-  .imoveis-destaque .card-imovel .imagem-imovel {
-    height: 20em;
+  .imoveis-destaque .card-imovel {
+    /* Adicione um padding lateral diretamente ao card */
+    padding: 0 1em;
+    width: 100%;
   }
 }
 

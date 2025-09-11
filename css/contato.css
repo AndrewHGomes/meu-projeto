@@ -133,20 +133,25 @@
 }
 
 .form-contato button {
-  background-color: var(--cor-primaria);
-  color: var(--cor-texto-claro);
+  background-image: linear-gradient(
+    to right,
+    var(--cor-primaria),
+    var(--cor-gradiente-claro)
+  );
+  color: var(--cor-texto-escuro);
   border: none;
   padding: 1em;
   margin-top: 1.5em;
   cursor: pointer;
   border-radius: var(--raio-borda-pequeno);
-  font-weight: var(--peso-fonte-bold);
+  font-weight: bold;
   font-size: 1.1em;
-  transition: background-color 0.3s ease;
+  box-shadow: var(--sombra-media);
+  transition: all 0.4s ease;
 }
 
 .form-contato button:hover {
-  background-color: var(--cor-secundaria);
+  box-shadow: var(--sombra-hover);
 }
 
 /* ========================================================== */
