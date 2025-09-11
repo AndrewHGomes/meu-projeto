@@ -173,6 +173,56 @@
 }
 
 /* ========================================================== */
+/* Estilos para a Seção de Redes Sociais no Main */
+/* ========================================================== */
+.social-main {
+  text-align: center;
+  padding: 2em 1em;
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+}
+
+.social-main h2 {
+  color: var(--cor-primaria);
+  font-size: 2.2em;
+  margin-bottom: 1.5em;
+}
+
+.social-main .social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+.social-main .social-icons a {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: var(--cor-texto-escuro);
+  background-image: linear-gradient(
+    to right,
+    var(--cor-primaria),
+    var(--cor-gradiente-claro)
+  );
+  padding: 0.8em 1.5em;
+  border-radius: 5px;
+  box-shadow: var(--sombra-media);
+  transition: all 0.4s ease;
+}
+
+.social-main .social-icons a:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--sombra-hover);
+}
+
+.social-main .social-icons a i {
+  color: var(--cor-texto-escuro);
+}
+
+/* ========================================================== */
 /* Estilos para telas menores */
 /* ========================================================== */
 @media (max-width: 768px) {
@@ -186,5 +236,10 @@
 
   .banner-contato p {
     font-size: 1.2em;
+  }
+
+  .social-main .social-icons a {
+    font-size: 1em;
+    padding: 0.6em 1em;
   }
 }
