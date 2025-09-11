@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="./assets/ico.png" />
+    <link rel="icon" type="image/svg++xml" href="../assets/ico.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/cadastro.css" />
-    <script type="module" src="./javascript/cadastro.js" defer></script>
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/cadastro.css" />
+    <script type="module" src="../javascript/cadastro.js" defer></script>
     <title>CADASTRE SEU IMÓVEL</title>
   </head>
   <body>
     <header>
-      <a href="./index.html">
-        <img src="./assets/ico.png" alt="logo-empresa" />
+      <a href="../index.html">
+        <img src="../assets/ico.png" alt="logo-empresa" />
         <p><small>Central de Imóveis</small></p>
         <p><small>São José do Rio Pardo</small></p>
         <p><small>e Região</small></p>
@@ -25,28 +25,89 @@
       <nav>
         <ul>
           <li>
-            <a href="./index.html">Início</a>
+            <a href="../index.html">Início</a>
           </li>
           <li>
-            <a href="./pages/imoveis.html">Imóveis</a>
+            <a href="./imoveis.html">Imóveis</a>
           </li>
           <li>
-            <a href="./pages/sobre.html">Sobre</a>
+            <a href="./sobre.html">Sobre</a>
           </li>
           <li>
-            <a href="./pages/contato.html">Contato</a>
+            <a href="./contato.html">Contato</a>
           </li>
         </ul>
       </nav>
     </header>
     <main>
-      <h2>Cadastre seu imóvel</h2>
-      <p>
-        Preenchendo o formulário abaixo, você poderá divulgar seu imóvel para
-        venda ou locação em nosso site. Após o cadastro do imóvel, você receberá
-        o contato de um corretor que fará o atendimento e a avaliação do imóvel,
-        se for do seu interesse.
-      </p>
+      <section class="banner-cadastro">
+        <h1>Cadastre seu Imóvel</h1>
+        <p>
+          Preencha o formulário para divulgar seu imóvel. Um de nossos
+          corretores entrará em contato para te ajudar com o processo.
+        </p>
+      </section>
+      <section class="cadastro-principal">
+        <div class="info-aviso">
+          <h2>Quer Vender ou Alugar seu Imóvel?</h2>
+          <p>
+            Conte com a nossa experiência para encontrar o comprador ou
+            inquilino ideal. Nosso time de especialistas fará a avaliação
+            completa do imóvel e oferecerá as melhores soluções para sua
+            necessidade.
+          </p>
+          <div class="contato-rapido">
+            <a href="tel:+5519991047301">
+              <i class="fa-brands fa-whatsapp"></i>
+              Entre em Contato via Whatsapp
+            </a>
+          </div>
+        </div>
+        <div class="form-cadastro">
+          <h2>Dados do Imóvel</h2>
+          <form action="" method="post">
+            <label for="tipo-imovel">Tipo de Imóvel</label>
+            <select id="tipo-imovel" name="tipo-imovel" required>
+              <option value="">Selecione...</option>
+              <option value="casa">Casa</option>
+              <option value="apartamento">Apartamento</option>
+              <option value="terreno">Terreno</option>
+              <option value="comercial">Comercial</option>
+              <option value="outros">Outros</option>
+            </select>
+            <label for="tipo-contrato">Para qual finalidade?</label>
+            <select id="tipo-contrato" name="tipo-contrato" required>
+              <option value="">Selecione...</option>
+              <option value="venda">Venda</option>
+              <option value="aluguel">Aluguel</option>
+            </select>
+            <label for="localizacao">Localização</label>
+            <input
+              type="text"
+              id="localizacao"
+              name="localizacao"
+              placeholder="Rua, Bairro, Cidade"
+              required
+            />
+            <label for="descricao">Descrição</label>
+            <textarea
+              id="descricao"
+              name="descricao"
+              rows="5"
+              placeholder="Detalhes sobre o imóvel..."
+            ></textarea>
+
+            <h2 class="form-title">Dados do Proprietário</h2>
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required />
+            <label for="email">Seu Email</label>
+            <input type="email" id="email" name="email" required />
+            <label for="telefone">Telefone (Whatsapp)</label>
+            <input type="tel" id="telefone" name="telefone" required />
+            <button type="submit">Cadastrar Imóvel</button>
+          </form>
+        </div>
+      </section>
     </main>
     <footer>
       <section class="footer-inicial">
@@ -62,24 +123,12 @@
           <h3>Links Rápidos</h3>
           <nav>
             <ul>
-              <li>
-                <a href="">Home</a>
-              </li>
-              <li>
-                <a href="">Imóveis</a>
-              </li>
-              <li>
-                <a href="">Contato</a>
-              </li>
-              <li>
-                <a href="">Sobre Nós</a>
-              </li>
-              <li>
-                <a href="">Avaliações</a>
-              </li>
-              <li>
-                <a href="">Blog</a>
-              </li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="./imoveis.html">Imóveis</a></li>
+              <li><a href="./contato.html">Contato</a></li>
+              <li><a href="./sobre.html">Sobre Nós</a></li>
+              <li><a href="#">Avaliações</a></li>
+              <li><a href="#">Blog</a></li>
             </ul>
           </nav>
         </div>
@@ -87,24 +136,12 @@
           <h3>Tipos de Imóveis</h3>
           <nav>
             <ul>
-              <li>
-                <a href="">Apartamentos</a>
-              </li>
-              <li>
-                <a href="">Casas</a>
-              </li>
-              <li>
-                <a href="">Studios</a>
-              </li>
-              <li>
-                <a href="">Coberturas</a>
-              </li>
-              <li>
-                <a href="">Lofts</a>
-              </li>
-              <li>
-                <a href="">Terrenos</a>
-              </li>
+              <li><a href="#">Apartamentos</a></li>
+              <li><a href="#">Casas</a></li>
+              <li><a href="#">Studios</a></li>
+              <li><a href="#">Coberturas</a></li>
+              <li><a href="#">Lofts</a></li>
+              <li><a href="#">Terrenos</a></li>
             </ul>
           </nav>
         </div>
@@ -112,24 +149,12 @@
           <h3>Regiões Atendidas</h3>
           <nav>
             <ul>
-              <li>
-                <a href="">São José do Rio Pardo</a>
-              </li>
-              <li>
-                <a href="">Mococa</a>
-              </li>
-              <li>
-                <a href="">Tapiratiba</a>
-              </li>
-              <li>
-                <a href="">Itobi</a>
-              </li>
-              <li>
-                <a href="">Vargem Grande do Sul</a>
-              </li>
-              <li>
-                <a href="">Caconde</a>
-              </li>
+              <li><a href="#">São José do Rio Pardo</a></li>
+              <li><a href="#">Mococa</a></li>
+              <li><a href="#">Tapiratiba</a></li>
+              <li><a href="#">Itobi</a></li>
+              <li><a href="#">Vargem Grande do Sul</a></li>
+              <li><a href="#">Caconde</a></li>
             </ul>
           </nav>
         </div>
@@ -165,18 +190,10 @@
       <section class="footer-redes">
         <h3>Siga-nos nas redes sociais</h3>
         <nav>
-          <a href="">
-            <i class="fa-brands fa-facebook"></i>
-            Facebook
-          </a>
-          <a href="">
-            <i class="fa-brands fa-instagram"></i>
-            Instagram
-          </a>
-          <a href="">
-            <i class="fa-brands fa-whatsapp"></i>
-            Whatsapp
-          </a>
+          <a href=""><i class="fa-brands fa-facebook"></i>Facebook</a>
+          <a href=""><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href=""><i class="fa-brands fa-whatsapp"></i>Whatsapp</a>
+          <a href=""><i class="fa-brands fa-youtube"></i>YouTube</a>
         </nav>
       </section>
       <section class="footer-novidades">
@@ -195,8 +212,8 @@
           <p>CRECI/SP 12345 | 12.345.678/0001-90</p>
         </div>
         <nav>
-          <a href="">Política de Privacidade</a> |
-          <a href="">Termos de Uso</a> | <a href="">Cookies</a>
+          <a href="#">Política de Privacidade</a> |
+          <a href="#">Termos de Uso</a> | <a href="#">Cookies</a>
         </nav>
       </section>
       <h5>Desenvolvido por D'affari Sistemas de Informação</h5>

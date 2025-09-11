@@ -1,0 +1,192 @@
+/* ========================================================== */
+/* Estilos do Banner de Cadastro */
+/* ========================================================== */
+.banner-cadastro {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../assets/home-hero.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--cor-texto-claro);
+  text-align: center;
+  padding: 8em 2em;
+}
+
+.banner-cadastro h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+}
+
+.banner-cadastro p {
+  font-size: 1.5em;
+  font-weight: 300;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ========================================================== */
+/* Estilos da Seção Principal de Cadastro */
+/* ========================================================== */
+.cadastro-principal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3em;
+  padding: 4em 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cadastro-principal h2 {
+  color: var(--cor-primaria);
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 1.5em;
+  width: 100%;
+}
+
+/* ========================================================== */
+/* Estilos da Seção de Aviso e Contato Rápido */
+/* ========================================================== */
+.info-aviso {
+  flex: 1 1 350px;
+  padding: 2em;
+  background-color: var(--cor-card);
+  border-radius: 5px;
+  box-shadow: var(--sombra-media);
+  text-align: center;
+  height: fit-content;
+}
+
+.info-aviso h2 {
+  font-size: 1.8em;
+}
+
+.info-aviso p {
+  line-height: 1.6;
+  color: var(--cor-texto-escuro);
+}
+
+.info-aviso .contato-rapido {
+  margin-top: 2em;
+}
+
+.info-aviso .contato-rapido a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: var(--cor-texto-escuro);
+  background-image: linear-gradient(
+    to right,
+    var(--cor-primaria),
+    var(--cor-gradiente-claro)
+  );
+  padding: 0.8em 1.5em;
+  border-radius: 5px;
+  box-shadow: var(--sombra-media);
+  transition: all 0.4s ease;
+}
+
+.info-aviso .contato-rapido a:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--sombra-hover);
+}
+
+.info-aviso .contato-rapido i {
+  color: var(--cor-texto-escuro);
+}
+
+/* ========================================================== */
+/* Estilos do Formulário de Cadastro */
+/* ========================================================== */
+.form-cadastro {
+  flex: 1 1 500px;
+  padding: 2em;
+  background-color: var(--cor-card);
+  border-radius: 5px;
+  box-shadow: var(--sombra-media);
+}
+
+.form-cadastro form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-cadastro .form-title {
+  margin-top: 1em;
+}
+
+.form-cadastro label {
+  font-weight: bold;
+  margin-top: 1em;
+  color: var(--cor-texto-escuro);
+}
+
+.form-cadastro input,
+.form-cadastro select,
+.form-cadastro textarea {
+  width: 100%;
+  padding: 0.8em;
+  margin-top: 0.5em;
+  border: 1px solid var(--cor-primaria);
+  border-radius: 2px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  background-color: var(--cor-fundo);
+}
+
+.form-cadastro input:focus,
+.form-cadastro select:focus,
+.form-cadastro textarea:focus {
+  border-color: var(--cor-primaria);
+  outline: none;
+}
+
+.form-cadastro textarea {
+  resize: vertical;
+}
+
+.form-cadastro button {
+  background-image: linear-gradient(
+    to right,
+    var(--cor-primaria),
+    var(--cor-gradiente-claro)
+  );
+  color: var(--cor-texto-escuro);
+  border: none;
+  padding: 1em;
+  margin-top: 1.5em;
+  cursor: pointer;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: var(--sombra-media);
+  transition: all 0.4s ease;
+}
+
+.form-cadastro button:hover {
+  box-shadow: var(--sombra-hover);
+}
+
+/* ========================================================== */
+/* Estilos para telas menores */
+/* ========================================================== */
+@media (max-width: 768px) {
+  .cadastro-principal {
+    flex-direction: column;
+  }
+
+  .banner-cadastro h1 {
+    font-size: 2.5em;
+  }
+
+  .banner-cadastro p {
+    font-size: 1.2em;
+  }
+}
